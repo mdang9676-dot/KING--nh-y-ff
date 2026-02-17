@@ -1,0 +1,27 @@
+ĐỘ NHẠY FF - by KING
+<br> body {<br> font-family: Arial, sans-serif;<br> background-color: #f0f0f0;<br> margin: 0;<br> padding: 20px;<br> display: flex;<br> justify-content: center;<br> align-items: center;<br> height: 100vh;<br> }<br> .container {<br> background-color: white;<br> padding: 30px;<br> border-radius: 10px;<br> box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);<br> width: 100%;<br> max-width: 500px;<br> text-align: center;<br> }<br> h1 {<br> color: #ff4500;<br> margin-bottom: 20px;<br> }<br> input {<br> padding: 10px;<br> margin: 10px 0;<br> width: 80%;<br> border: 1px solid #ccc;<br> border-radius: 5px;<br> }<br> button {<br> padding: 10px 20px;<br> background-color: #ff4500;<br> color: white;<br> border: none;<br> border-radius: 5px;<br> cursor: pointer;<br> margin-top: 10px;<br> }<br> button:hover {<br> background-color: #cc3700;<br> }<br> #result {<br> margin-top: 20px;<br> text-align: left;<br> display: none;<br> }<br> .success {<br> color: green;<br> }<br> .error {<br> color: red;<br> }<br> 
+
+
+
+ĐỘ NHẠY FF - by KING
+
+
+Link key: 
+
+
+KEY: 
+
+
+
+Nhập dòng máy: 
+
+
+Tìm kiếm!
+
+
+CHÚC MỌI NGƯỜI CÓ 1 TRẢI NGHIỆM TỐT
+
+
+
+
+<br> function searchSensitivity() {<br> const keyInput = document.getElementById('keyInput').value;<br> const deviceInput = document.getElementById('deviceInput').value;<br> const keyStatus = document.getElementById('keyStatus');<br> const resultDiv = document.getElementById('result');<br><br> // Kiểm tra key (key đúng là "hapynewyear2026-676767")<br> if (keyInput !== "hapynewyear2026-676767") {<br> keyStatus.innerHTML = '<span class="error">Thất bại (key sai)</span>';<br> resultDiv.style.display = 'none';<br> return;<br> } else {<br> keyStatus.innerHTML = '<span class="success">Thành công (key đúng)</span>';<br> }<br><br> // Kiểm tra nếu không nhập dòng máy<br> if (!deviceInput) {<br> alert("Vui lòng nhập dòng máy!");<br> resultDiv.style.display = 'none';<br> return;<br> }<br><br> // Random các giá trị độ nhạy<br> const redDot = Math.floor(Math.random() * (180 - 125 + 1)) + 125;<br> const scope2x = Math.floor(Math.random() * (190 - 164 + 1)) + 164;<br> const scope4x = Math.floor(Math.random() * (170 - 130 + 1)) + 130;<br> const dpi = Math.floor(Math.random() * (570 - 490 + 1)) + 490;<br> const fireButton = Math.floor(Math.random() * (58 - 50 + 1)) + 50;<br><br> // Hiển thị kết quả<br> resultDiv.style.display = 'block';<br> resultDiv.innerHTML = `<br> <h3>Đã tìm thấy</h3><br> <p>Độ nhạy FF dòng máy: <strong>${deviceInput}</strong></p><br> <p>Red Dot: ${redDot}</p><br> <p>Ống ngắm 2x: ${scope2x}</p><br> <p>Ống ngắm 4x: ${scope4x}</p><br> <p>DPI: ${dpi}</p><br> <p>Nút bắn: ${fireButton}</p><br> `;<br> }<br> 
